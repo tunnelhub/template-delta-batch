@@ -28,6 +28,10 @@ beforeAll(() => {
   const updateExecutionStatisticsFunc = jest.spyOn(DeltaIntegrationFlow.prototype as any, 'updateExecutionStatistics');
   updateExecutionStatisticsFunc.mockImplementation(() => {
   });
+
+  const updateMetadata = jest.spyOn(DeltaIntegrationFlow.prototype as any, 'updateMetadata');
+  updateMetadata.mockImplementation(() => {
+  });
 });
 
 type CallbackFunction = (error: any | null, results: any[], fields: string[]) => void;
@@ -67,7 +71,7 @@ test('testOnyInserts', async () => {
   /**
    * Calling my function
    */
-  const response = await main.handler({});
+  const response = await main.handler({}, {});
 
   expect(response.statusCode).toEqual(200);
   expect(typeof response.body).toBe('string');
