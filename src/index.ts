@@ -2,7 +2,6 @@ import { AutomationExecution } from '@4success/tunnelhub-sdk';
 import { ProxyResult } from 'aws-lambda';
 import Integration from './classes/integration';
 
-
 /**
  * This is our entry point for start automation executing.
  * You can personalize the success and error messages according your needs
@@ -23,4 +22,3 @@ export const handler = async (event: any, context: any): Promise<ProxyResult> =>
     body: 'Automation executed with no errors!',
   };
 };
-
