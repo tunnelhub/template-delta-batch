@@ -1,6 +1,6 @@
-import { BatchDeltaIntegrationFlow } from '@4success/tunnelhub-sdk/src/classes/flows/batchDeltaIntegrationFlow';
-import { GenericParameter, IntegrationMessageReturnBatch, Metadata } from '@4success/tunnelhub-sdk';
-import { TunnelHubSystem } from '@4success/tunnelhub-sdk/src/types/data';
+import { BatchDeltaIntegrationFlow } from '@tunnelhub/sdk/src/classes/flows/batchDeltaIntegrationFlow';
+import { GenericParameter, IntegrationMessageReturnBatch, Metadata } from '@tunnelhub/sdk';
+import { TunnelHubSystem } from '@tunnelhub/sdk/src/types/data';
 import { IntegrationModel } from '../data';
 
 export default class Integration extends BatchDeltaIntegrationFlow {
