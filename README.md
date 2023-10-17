@@ -13,8 +13,8 @@ delta images but uses more memory.
 
 ### Default configuration:
 
-* Environment: nodejs14.x
-* Memory: 128mb
+* Environment: nodejs18.x
+* Memory: 256mb
 * Timeout: 60s
 
 You can personalize these settings in the **tunnelhub.yml** file.
