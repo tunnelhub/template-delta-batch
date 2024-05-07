@@ -3,6 +3,7 @@ import { AutomationExecution } from '@tunnelhub/sdk';
 import AutomationLog from '@tunnelhub/sdk/src/classes/logs/automationLog';
 import AutomationDelta from '@tunnelhub/sdk/src/classes/logs/automationDelta';
 import { DeltaIntegrationFlow } from '@tunnelhub/sdk/src/classes/flows/deltaIntegrationFlow';
+import type { BatchWriteCommandOutput } from '@aws-sdk/lib-dynamodb';
 
 describe('test src/integration', () => {
   beforeAll(() => {
@@ -17,6 +18,9 @@ describe('test src/integration', () => {
     const persistLogsFunc = jest.spyOn(AutomationLog.prototype as any, 'save');
     persistLogsFunc.mockImplementation(() => {
     });
+
+    const persistLogsFuncBatch = jest.spyOn(AutomationLog, 'saveInDynamoDB');
+    persistLogsFuncBatch.mockResolvedValue({} as BatchWriteCommandOutput);
 
     const saveDelta = jest.spyOn(AutomationDelta.prototype as any, 'save');
     saveDelta.mockImplementation(() => {
