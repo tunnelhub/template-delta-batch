@@ -1828,10 +1828,10 @@
   dependencies:
     defer-to-connect "^2.0.0"
 
-"@tunnelhub/sdk@^1.4.0":
-  version "1.4.0"
-  resolved "https://registry.yarnpkg.com/@tunnelhub/sdk/-/sdk-1.4.0.tgz#ab335bd5f29912500865bfd96c85d65c97136284"
-  integrity sha512-qER3XSGP2NHO+H5/DOHdaYgfgPHdD68mG0S3Q7jb12lVpd5LreldMz3XfLpOy32y/xG6fWHLvUEid1J2TP7awg==
+"@tunnelhub/sdk@^1.4.1":
+  version "1.4.1"
+  resolved "https://registry.yarnpkg.com/@tunnelhub/sdk/-/sdk-1.4.1.tgz#e8eba472b2be00a5386ea98106a58c998a45738e"
+  integrity sha512-/6Wa+ryH5KWijPxaRRgTQrF2Oyr/noLS2Np9Su3dUzBsaPOnVs1OXktwUhTwMXIIApzVPPmpwWgNd8MESW1zMA==
   dependencies:
     "@aws-sdk/client-dynamodb" "^3.438.0"
     "@aws-sdk/client-s3" "^3.440.0"

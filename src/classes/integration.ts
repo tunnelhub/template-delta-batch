@@ -5,10 +5,10 @@ import { IntegrationModel } from '../types';
 import metadata from '../metadata';
 
 export default class Integration extends BatchDeltaIntegrationFlow<IntegrationModel> {
-  private static keyFields: string[] = [
+  private static keyFields: Array<keyof IntegrationModel> = [
     'key_field',
   ];
-  private static deltaFields: string[] = [
+  private static deltaFields: Array<keyof IntegrationModel> = [
     'regular_field',
   ];
 
