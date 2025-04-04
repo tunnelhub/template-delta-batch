@@ -1,10 +1,4 @@
-import {
-  AutomatedIntegrationParameters,
-  BatchDeltaIntegrationFlow,
-  IntegrationMessageReturnBatch,
-  Metadata,
-  TunnelHubSystem,
-} from '@tunnelhub/sdk';
+import { BatchDeltaIntegrationFlow, IntegrationMessageReturnBatch, Metadata } from '@tunnelhub/sdk';
 import { IntegrationModel } from '../types/integration';
 import metadata from '../metadata';
 
@@ -16,13 +10,8 @@ export default class Integration extends BatchDeltaIntegrationFlow<IntegrationMo
     'regular_field',
   ];
 
-  private readonly parameters: AutomatedIntegrationParameters;
-  private readonly systems: TunnelHubSystem[];
-
   constructor(event: any, context: any) {
     super(event, Integration.keyFields, Integration.deltaFields, context);
-    this.systems = event.systems ?? [];
-    this.parameters = event.parameters ?? {};
     this.packageSize = 50.;
     /**
      this.
