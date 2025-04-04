@@ -1,40 +1,41 @@
-# Template -  Delta Batch Integration Flow
-![Coverage](coverage/badge.svg)
-## NodejS  / Typescript
+# Template - Fluxo de Integração Delta em Lote
 
-This is a basic template for automations of type "Delta Batch". Use it as a start point for your automation.
+## NodeJS / Typescript
 
-The "Delta" integration flow extract data from one or more sources, process all items at once, and save this execution
-result as a delta image.
-The subsequent execution will consider only changes between the last extraction.
+Este é um template básico para automações do tipo "Delta em Lote". Use-o como ponto de partida para sua automação.
 
-It is designed for maximum flexibility but has an "all or nothing" behavior. This flow saves much processing time using
-delta images but uses more memory.
+O fluxo de integração "Delta" extrai dados de uma ou mais fontes, processa todos os itens de uma vez e salva o resultado
+dessa execução como uma imagem delta.  
+A execução subsequente considerará apenas as mudanças em relação à última extração.
 
-### Default configuration:
+Ele é projetado para oferecer máxima flexibilidade, mas possui um comportamento de "tudo ou nada". Esse fluxo economiza
+muito tempo de processamento usando imagens delta, mas consome mais memória.
 
-* Environment: nodejs18.x
-* Memory: 256mb
-* Timeout: 60s
+### Configuração padrão:
 
-You can personalize these settings in the **tunnelhub.yml** file.
+* Ambiente: nodejs22.x
+* Memória: 512mb
+* Timeout: 30s
 
-### Intructions:
+Você pode personalizar essas configurações no arquivo **tunnelhub.yml**.
 
-* You can install all dependencies with `npm install` or `yarn`.
-* Your main logic is in the `src/index.ts` file.
-* You can check our example test in `__tests__` folder. Our tests are written
-  using [Jest](https://www.npmjs.com/package/jest).
-* To run your tests, just run `yarn run test`
-* To deploy your automation, zip all your project in a zip file. Use `yarn run build` to transpile all your code and
-  libraries using esbuild and save it in `dist` folder.
-* Check our [documentation](https://docs.tunnelhub.io) for more information.
+### Instruções:
 
-To deploy, execute the command:
+* Você pode instalar todas as dependências com `npm install` ou `yarn`.
+* Sua lógica principal está no arquivo `src/index.ts`.
+* Você pode verificar nosso teste de exemplo na pasta `__tests__`. Nossos testes são escritos
+  usando [Jest](https://www.npmjs.com/package/jest).
+* Para rodar os testes, basta executar `yarn run test`
+* Para fazer o deploy da sua automação, compacte todo o seu projeto em um arquivo zip. Use `yarn run build` para
+  transpilar todo o seu código e
+  bibliotecas usando esbuild e salvá-los na pasta `dist`.
+* Consulte nossa [documentação](https://docs.tunnelhub.io) para mais informações.
 
-* `yarn run build && th deploy-automation --env ENVNAME --message "Deploy message"`
+Para fazer o deploy, execute o comando:
 
-For convenience, was created some helper scripts:
+* `yarn run build && th deploy-automation --env ENVNAME --message "Mensagem do deploy"`
 
-* For DEV environment: `yarn run deploy:dev --message "Deploy message"`
-* For PRD environment: `yarn run deploy:prd --message "Deploy message"`
+Para conveniência, alguns scripts auxiliares foram criados:
+
+* Para ambiente DEV: `yarn run deploy:dev --message "Mensagem do deploy"`
+* Para ambiente PRD: `yarn run deploy:prd --message "Mensagem do deploy"`  

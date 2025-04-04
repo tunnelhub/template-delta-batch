@@ -1,6 +1,6 @@
 import { AutomationExecution } from '@tunnelhub/sdk';
 import { ProxyResult } from 'aws-lambda';
-import Integration from './classes/integration';
+import Integration from './core/integration';
 
 /**
  * This is our entry point for start automation executing.

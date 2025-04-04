@@ -1,7 +1,11 @@
-import { BatchDeltaIntegrationFlow } from '@tunnelhub/sdk/src/classes/flows/batchDeltaIntegrationFlow';
-import { GenericParameter, IntegrationMessageReturnBatch, Metadata } from '@tunnelhub/sdk';
-import { TunnelHubSystem } from '@tunnelhub/sdk/src/types/data';
-import { IntegrationModel } from '../types';
+import {
+  AutomatedIntegrationParameters,
+  BatchDeltaIntegrationFlow,
+  IntegrationMessageReturnBatch,
+  Metadata,
+  TunnelHubSystem,
+} from '@tunnelhub/sdk';
+import { IntegrationModel } from '../types/integration';
 import metadata from '../metadata';
 
 export default class Integration extends BatchDeltaIntegrationFlow<IntegrationModel> {
@@ -12,7 +16,7 @@ export default class Integration extends BatchDeltaIntegrationFlow<IntegrationMo
     'regular_field',
   ];
 
-  private readonly parameters: { custom: GenericParameter[] };
+  private readonly parameters: AutomatedIntegrationParameters;
   private readonly systems: TunnelHubSystem[];
 
   constructor(event: any, context: any) {
