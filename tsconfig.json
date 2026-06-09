@@ -3,8 +3,7 @@
     "target": "ES2023",
     "module": "Preserve",
     "moduleResolution": "Bundler",
-    "emitDeclarationOnly": true,
-    "declaration": true,
+    "noEmit": true,
     "esModuleInterop": true
   },
   "include": [
